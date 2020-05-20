@@ -13,7 +13,7 @@ class InputForm extends Component {
 
     append = (event) => {
         let newState = this.state;
-        newState.inputString = event.target.value;
+        newState.inputString = event.target.value.trim();
         this.setState(newState);
     }
 
@@ -33,7 +33,7 @@ class InputForm extends Component {
         // body = (body.length < 1 ? body : body.substr(0, body.length - 1));
 
         // let url = 'https://swe432-assnseven.herokuapp.com/answer';
-        let url = 'http://localhost:5000/tt';
+        let url = 'https://rantoni4-swe432-finalback.herokuapp.com/tt';
 
         const res = await fetch(url,
             {
